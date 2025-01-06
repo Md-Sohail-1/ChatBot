@@ -1,5 +1,5 @@
 let main_body = document.querySelector("#main_body");
-let bot_current_status = document.querySelector("#user_status);
+let bot_current_status = document.querySelector("#user_status");
 main_body.addEventListener("scroll", function (e) {
 //    main_body.style.justifyContent="start";
 //  console.log(e)
