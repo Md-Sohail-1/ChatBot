@@ -1,4 +1,5 @@
 let main_body = document.querySelector("#main_body");
+let bot_current_status = document.querySelector("#user_status);
 main_body.addEventListener("scroll", function (e) {
 //    main_body.style.justifyContent="start";
 //  console.log(e)
@@ -23,6 +24,7 @@ document.querySelector(".send").addEventListener("click", (e)=>{
     main_body.appendChild(user_input)
     let text = text_input.value.toLowerCase().split(" ");
     text_input.value = "";
+    bot_current_status.innerHTML = "Typing...";
     
     setTimeout(()=>{
       let user_output = document.createElement("p");
@@ -99,7 +101,9 @@ document.querySelector(".send").addEventListener("click", (e)=>{
       else(
         user_output.innerHTML="hi how can i help you?, you ask me about Sohail."
       );
-      main_body.appendChild(user_output)
+      main_body.appendChild(user_output);
+      bot_current_status.innerHTML ="Message";
+      window.navigator.vibrate(300);
     },1000)
   }
 })
